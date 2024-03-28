@@ -1,0 +1,18 @@
+module.exports = {
+    successResponse : (TRAN_ID, details) => {
+        return {
+            tid : TRAN_ID,
+            code : 'TS',
+            description : 'Transaction Success',
+            details : details
+        }
+    },
+    failedResponse : (TRAN_ID, details) => {
+        return {
+            tid : TRAN_ID,
+            code : 'F',
+            description : 'Failed to process transaction',
+            details : details
+        }
+    }
+}
